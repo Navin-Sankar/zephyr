@@ -39,12 +39,17 @@
 			label = "User";
 			gpios = <&gpioc 13 GPIO_ACTIVE_LOW>;
 		};
+		ltc_int: ltc_interrupt {
+			label = "LTC Interrupt";
+			gpios = <&gpiob 0 GPIO_ACTIVE_LOW>;
+		};
 	};
 
 	aliases {
 		led0 = &green_led_2;
 		led1 = &green_led_1;
 		sw0 = &user_button;
+		sw1 = &ltc_int;
 		eswifi0 = &wifi0;
 	};
 };
